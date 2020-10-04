@@ -23,7 +23,7 @@ Known Issues
 - POM was not implemented the way I wanted due to time constraints. Also due to the dynamic values of the page, most elements were not located using the FindBy annotation since this approach takes static strings only although there's plenty of other elements that could be located this way.
 - There's plenty of code that can be separated into smaller more reusable functions. There are a few code duplicates that can easily be avoided.
 - I don't like to use thread.sleep and much rather use explicit waits but due to the time limitation, I did it to code some steps faster.
-- The steps to select steps and continue to payment were not implemented due to time limitations.
+- The steps to select seats and continue to payment were not implemented due to time limitations.
 
 How to run
 1. Run the TestRunner class

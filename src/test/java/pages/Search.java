@@ -118,6 +118,9 @@ public class Search {
     public void updateDepart(WebDriver wd, String departureDate) throws ParseException, InterruptedException {
         String[] splitedDate = departureDate.split("\\s+");
 
+        // Close cookies
+        wd.findElement(By.xpath("//div[@class='cookie-popup__close']")).click();
+
         // Get current date
         int currentDay = Integer.valueOf(wd.findElement(By.xpath("//carousel-item[@class='ng-star-inserted']//button[@data-selected='true']//span[@class='date-item__day-of-month h4 date-item__day-of-month--selected']")).getText());
         String currentMonth = wd.findElement(By.xpath("//carousel-item[@class='ng-star-inserted']//button[@data-selected='true']//span[@class='date-item__month h4 date-item__month--selected']")).getText();
@@ -209,7 +212,6 @@ public class Search {
     public void selectValueFare(WebDriver wd) throws InterruptedException {
         Thread.sleep(2000);
         wd.findElement(By.xpath("//flight-card")).click();
-        wd.findElement(By.xpath("//div[@class='cookie-popup__close']")).click();
         Thread.sleep(2000);
         wd.findElement(By.xpath("//button[@class='fare-card__button fare-card__price ry-button--outline-dark-blue']")).click();
         Thread.sleep(2000);
